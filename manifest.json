@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Strava Auto Kudos",
+    "version": "1.0",
+    "description": "Auto-clicks Strava kudos every 5 min",
+    "permissions": ["scripting", "tabs"],
+    "host_permissions": ["https://www.strava.com/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.strava.com/*"],
+        "js": ["strava-auto-kudos.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
